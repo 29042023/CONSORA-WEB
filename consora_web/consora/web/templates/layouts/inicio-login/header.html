@@ -1,0 +1,40 @@
+{% load static %}
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm login-navbar">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="{% url 'index' %}">
+                <img src="{% static 'img/logo.png' %}" alt="Consora" class="logo-navbar">
+            </a>
+
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNavLogin"
+                aria-controls="navbarNavLogin"
+                aria-expanded="false"
+                aria-label="Abrir navegación"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNavLogin">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="{% url 'index' %}#inicio">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'index' %}#funcionalidades">Funcionalidades</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'index' %}#como-funciona">Cómo funciona</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'index' %}#actores">Para quién</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'index' %}#proveedores">Proveedores</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'index' %}#planes">Planes</a></li>
+                </ul>
+
+                <div class="d-flex gap-2">
+                    <a href="{% url 'login' %}" class="btn btn-primary{% if request.resolver_match.url_name == 'login' %} active{% endif %}">
+                        Login
+                    </a>
+                    <button type="button" class="btn btn-outline-primary" id="headerRegister">Registrarme</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>

@@ -1,0 +1,46 @@
+<header class="admin-topbar">
+
+    <button type="button" class="sidebar-toggle" id="sidebarToggle">
+        <i class="bi bi-list"></i>
+    </button>
+
+    <div class="topbar-title flex-grow-1">
+        <h4>{{ page_title|default:"Dashboard" }}</h4>
+        <small>{{ page_subtitle|default:"Resumen general de tus consorcios" }}</small>
+    </div>
+
+    <select class="form-select building-select" id="buildingFilter">
+        <option value="todos">Todos los edificios</option>
+        <option value="palmas">Edificio Las Palmas</option>
+        <option value="sol">Torres del Sol</option>
+        <option value="belgrano">Edificio Belgrano</option>
+    </select>
+
+    <a href="{% url 'chat' %}" class="topbar-icon-btn{% if request.resolver_match.url_name == 'chat' %} active{% endif %}">
+        <i class="bi bi-chat-dots-fill"></i>
+        <span class="badge-count">5</span>
+    </a>
+
+    <button type="button" class="topbar-icon-btn">
+        <i class="bi bi-bell"></i>
+        <span class="badge-dot"></span>
+    </button>
+
+    <div class="dropdown">
+        <div class="user-chip" data-bs-toggle="dropdown">
+            <div class="user-avatar">{{ usuario.iniciales }}</div>
+            <div class="d-none d-md-block">
+                <div style="font-weight:600; font-size:0.88rem;">{{ usuario.name_surname }}</div>
+                <small class="text-secondary">{{ usuario.mail }}</small>
+            </div>
+        </div>
+
+        <ul class="dropdown-menu dropdown-menu-end">
+            <li><a class="dropdown-item" href="#">Mi perfil</a></li>
+            <li><a class="dropdown-item" href="#">Configuración</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="{% url 'logout' %}">Cerrar sesión</a></li>
+        </ul>
+    </div>
+
+</header>

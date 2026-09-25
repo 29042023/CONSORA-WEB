@@ -1,0 +1,29 @@
+{% load static %}
+<footer class="login-footer-global">
+    <div class="container">
+        <div class="row g-4 align-items-center">
+            <div class="col-lg-6">
+                <div class="footer-brand">
+                    <img src="{% static 'img/logo.png' %}" alt="Consora" class="logo-navbar">
+                    <span>Gestión inteligente de consorcios</span>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="footer-links">
+                    <a href="{% url 'index' %}">Inicio</a>
+                    <a href="{% url 'index' %}#funcionalidades">Funcionalidades</a>
+                    <a href="#">Privacidad</a>
+                    <a href="#">Términos</a>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="footer-bottom">
+            <span>© 2026 Consora. Todos los derechos reservados.</span>
+            <span>Proyecto académico</span>
+        </div>
+    </div>
+</footer>

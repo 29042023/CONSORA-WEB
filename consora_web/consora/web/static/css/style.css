@@ -1,0 +1,842 @@
+/* =========================
+   VARIABLES
+========================= */
+
+:root {
+    --primary: #2563eb;
+    --primary-dark: #1d4ed8;
+    --dark: #111827;
+    --text: #374151;
+    --light-bg: #f8fafc;
+}
+
+
+/* =========================
+   GENERAL
+========================= */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family:
+        Inter,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+    color: var(--text);
+}
+
+section {
+    scroll-margin-top: 75px;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    min-height: 72px;
+}
+
+.navbar-brand {
+    font-size: 1.4rem;
+}
+
+.nav-link {
+    font-weight: 500;
+}
+
+.nav-link:hover {
+    color: var(--primary) !important;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero-section {
+    background:
+        radial-gradient(
+            circle at 80% 20%,
+            rgba(37, 99, 235, 0.12),
+            transparent 30%
+        ),
+        linear-gradient(
+            135deg,
+            #f8fbff,
+            #ffffff
+        );
+}
+
+
+/* =========================
+   DASHBOARD PREVIEW
+========================= */
+
+.dashboard-preview {
+    background: white;
+    border-radius: 24px;
+    padding: 25px;
+
+    border: 1px solid #e5e7eb;
+
+    transform: rotate(1deg);
+
+    transition: 0.3s ease;
+}
+
+.dashboard-preview:hover {
+    transform: rotate(0deg) translateY(-5px);
+}
+
+.dashboard-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 15px;
+}
+
+.stat-card {
+    background: #f8fafc;
+
+    border-radius: 15px;
+
+    padding: 20px;
+}
+
+.stat-card i {
+    font-size: 1.5rem;
+}
+
+.stat-card h3 {
+    margin: 10px 0 0;
+
+    font-weight: 700;
+}
+
+.stat-card small {
+    color: #6b7280;
+}
+
+.request-card {
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 15px;
+
+    padding: 18px;
+}
+
+
+/* =========================
+   PROBLEM
+========================= */
+
+.problem-card {
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 16px;
+
+    height: 100%;
+
+    border: 1px solid #e5e7eb;
+
+    transition: 0.25s ease;
+}
+
+.problem-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+.problem-card i {
+    font-size: 2rem;
+}
+
+.problem-card h6 {
+    margin-top: 15px;
+
+    font-weight: 700;
+}
+
+.problem-card p {
+    margin: 0;
+
+    font-size: 0.9rem;
+
+    color: #6b7280;
+}
+
+
+/* =========================
+   VALUE
+========================= */
+
+.section-description {
+    max-width: 650px;
+}
+
+.value-card {
+    padding: 35px 25px;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 20px;
+
+    transition: 0.3s ease;
+}
+
+.value-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.07);
+}
+
+.icon-circle {
+    width: 65px;
+    height: 65px;
+
+    border-radius: 50%;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 1.7rem;
+}
+
+
+/* =========================
+   FEATURES
+========================= */
+
+.feature-card {
+    background: white;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 18px;
+
+    padding: 28px;
+
+    transition: 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+
+    border-color: rgba(37, 99, 235, 0.3);
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+.feature-card i {
+    color: var(--primary);
+
+    font-size: 2rem;
+}
+
+.feature-card h5 {
+    margin-top: 20px;
+
+    font-weight: 700;
+}
+
+.feature-card p {
+    color: #6b7280;
+
+    margin-bottom: 0;
+}
+
+
+/* =========================
+   STEPS
+========================= */
+
+.step-card {
+    position: relative;
+
+    height: 100%;
+
+    padding: 30px;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 18px;
+
+    background: white;
+}
+
+.step-number {
+    position: absolute;
+
+    top: 15px;
+    right: 20px;
+
+    font-size: 0.8rem;
+
+    font-weight: 700;
+
+    color: #cbd5e1;
+}
+
+.step-card i {
+    display: block;
+
+    color: var(--primary);
+
+    font-size: 2rem;
+
+    margin-bottom: 20px;
+}
+
+.step-card h5 {
+    font-weight: 700;
+}
+
+.step-card p {
+    color: #6b7280;
+
+    margin-bottom: 0;
+}
+
+
+/* =========================
+   WORKFLOW
+========================= */
+
+.workflow {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow-x: auto;
+
+    padding: 20px 0;
+}
+
+.workflow-item {
+    min-width: 100px;
+
+    padding: 12px 15px;
+
+    background: #f1f5f9;
+
+    border-radius: 30px;
+
+    text-align: center;
+
+    font-size: 0.8rem;
+
+    white-space: nowrap;
+}
+
+.workflow-item.active {
+    background: var(--primary);
+
+    color: white;
+}
+
+.workflow-line {
+    width: 35px;
+
+    height: 2px;
+
+    background: #cbd5e1;
+
+    flex-shrink: 0;
+}
+
+
+/* =========================
+   ACTORS
+========================= */
+
+.actor-card {
+    position: relative;
+
+    background: #1f2937;
+
+    border: 1px solid #374151;
+
+    border-radius: 20px;
+
+    padding: 35px;
+
+    height: 100%;
+
+    transition: 0.3s ease;
+}
+
+.actor-card:hover {
+    transform: translateY(-5px);
+
+    border-color: #60a5fa;
+}
+
+.actor-card.featured {
+    border-color: var(--primary);
+
+    background:
+        linear-gradient(
+            145deg,
+            #1e3a8a,
+            #1f2937
+        );
+}
+
+.actor-card i {
+    color: #60a5fa;
+
+    font-size: 2.5rem;
+}
+
+.actor-card h4 {
+    margin-top: 20px;
+
+    font-weight: 700;
+}
+
+.actor-card ul {
+    padding-left: 20px;
+
+    color: #d1d5db;
+}
+
+.actor-card li {
+    margin-bottom: 8px;
+}
+
+.actor-badge {
+    position: absolute;
+
+    top: 20px;
+    right: 20px;
+
+    background: #2563eb;
+
+    padding: 5px 10px;
+
+    border-radius: 20px;
+
+    font-size: 0.7rem;
+}
+
+
+/* =========================
+   PROVIDER
+========================= */
+
+.provider-profile {
+    background: white;
+
+    border-radius: 20px;
+
+    padding: 30px;
+
+    border: 1px solid #e5e7eb;
+}
+
+.provider-avatar {
+    width: 65px;
+    height: 65px;
+
+    background: #dbeafe;
+
+    color: var(--primary);
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 1.6rem;
+}
+
+.provider-image {
+    height: 100px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #dbeafe,
+            #e0e7ff
+        );
+
+    border-radius: 10px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    color: #64748b;
+
+    font-size: 1.5rem;
+}
+
+
+/* =========================
+   BENEFITS
+========================= */
+
+.benefit-card {
+    background: white;
+
+    padding: 30px 20px;
+
+    border-radius: 18px;
+
+    text-align: center;
+
+    height: 100%;
+
+    border: 1px solid #e5e7eb;
+}
+
+.benefit-card i {
+    font-size: 2.2rem;
+
+    color: var(--primary);
+}
+
+.benefit-card h5 {
+    margin-top: 15px;
+
+    font-weight: 700;
+}
+
+.benefit-card p {
+    color: #6b7280;
+
+    margin-bottom: 0;
+}
+
+
+/* =========================
+   CTA
+========================= */
+
+.cta-section {
+    background:
+        linear-gradient(
+            135deg,
+            #1d4ed8,
+            #2563eb,
+            #3b82f6
+        );
+
+    padding: 40px 0;
+}
+
+.cta-section p {
+    max-width: 650px;
+}
+
+
+/* =========================
+   ASSISTANTS
+========================= */
+
+.assistant-panel {
+    background: white;
+    border-radius: 20px;
+    padding: 25px;
+    border: 1px solid #e5e7eb;
+}
+
+.assistant-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 10px;
+    border-radius: 14px;
+}
+
+.assistant-item:hover {
+    background: #f8fafc;
+}
+
+.assistant-item + .assistant-item {
+    margin-top: 4px;
+}
+
+.assistant-avatar {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: #dbeafe;
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+}
+
+.assistant-avatar.muted {
+    background: #f1f5f9;
+    color: #94a3b8;
+}
+
+
+/* =========================
+   PLANS
+========================= */
+
+.plan-card {
+    position: relative;
+    background: white;
+    padding: 30px;
+    border: 1px solid #e5e7eb;
+    border-radius: 20px;
+    transition: 0.3s ease;
+}
+
+.plan-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.07);
+}
+
+.plan-card.featured {
+    border-color: var(--primary);
+    box-shadow: 0 15px 35px rgba(37, 99, 235, 0.1);
+}
+
+.plan-badge {
+    position: absolute;
+    top: -12px;
+    left: 30px;
+    background: var(--primary);
+    color: white;
+    padding: 4px 14px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.plan-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+}
+
+.plan-icon.bronze {
+    background: #fdece1;
+    color: #b45309;
+}
+
+.plan-icon.gold {
+    background: #fef3c7;
+    color: #b7791f;
+}
+
+.plan-price-box {
+    display: flex;
+    align-items: baseline;
+    gap: 4px;
+}
+
+.plan-price {
+    display: inline-block;
+    min-width: 64px;
+    height: 30px;
+    border-bottom: 2px dashed #cbd5e1;
+}
+
+.plan-list {
+    list-style: none;
+    padding: 0;
+    margin: 18px 0 0;
+}
+
+.plan-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 6px 0;
+    font-size: 0.95rem;
+}
+
+.plan-list li i {
+    margin-top: 3px;
+}
+
+.addon-card {
+    background: white;
+    border: 1px dashed #cbd5e1;
+    border-radius: 20px;
+    padding: 25px 30px;
+}
+
+.addon-icon {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background: #dbeafe;
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+
+/* =========================
+   FOOTER (viejo, sin usar por login-footer-global,
+   se deja por si alguna otra vista lo referencia)
+========================= */
+
+footer h6 {
+    font-weight: 700;
+}
+
+footer li {
+    cursor: pointer;
+}
+
+.logo-navbar {
+    height: 42px;
+    width: auto;
+    object-fit: contain;
+}
+
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 991px) {
+
+    .hero-section {
+        text-align: center;
+    }
+
+    .dashboard-preview {
+        transform: none;
+    }
+
+    .dashboard-preview:hover {
+        transform: translateY(-5px);
+    }
+
+    .hero-section .d-flex {
+        justify-content: center;
+    }
+
+}
+
+
+@media (max-width: 576px) {
+
+    .display-4 {
+        font-size: 2.5rem;
+    }
+
+    .display-6 {
+        font-size: 2rem;
+    }
+
+    .dashboard-preview {
+        padding: 15px;
+    }
+
+    .workflow {
+        justify-content: flex-start;
+    }
+
+}
+
+
+/* =========================
+   LOGIN FOOTER
+   (calcado de login.css, para que se vea igual en index.html)
+========================= */
+
+.login-footer-global {
+    background: #071d3a;
+    color: white;
+    padding: 32px 0 22px;
+}
+
+.footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.footer-brand .logo-navbar {
+    width: 150px;
+    height: auto;
+    filter: brightness(0) invert(1);
+}
+
+.footer-brand span {
+    color: rgba(255,255,255,0.58);
+    font-size: 0.76rem;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+.footer-links a {
+    color: rgba(255,255,255,0.62);
+    font-size: 0.76rem;
+}
+
+.footer-links a:hover {
+    color: #fff;
+}
+
+.login-footer-global hr {
+    border-color: rgba(255,255,255,0.12);
+    margin: 22px 0 17px;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    color: rgba(255,255,255,0.42);
+    font-size: 0.68rem;
+}
+
+@media (max-width: 991px) {
+
+    .footer-links {
+        justify-content: flex-start;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+    }
+
+}
